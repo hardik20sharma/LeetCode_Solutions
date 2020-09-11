@@ -3,7 +3,6 @@ public:
     bool isValid(string str)
     {
         stack<char> s;
-
         for(char i : str)
             if(i == '(' || i == '{' || i == '[')
                 s.push(i);
@@ -15,7 +14,6 @@ public:
                 s.pop();
             else
                 return false;
-
         return s.size() == 0;
     }
 };
