@@ -13,15 +13,15 @@ public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
     {
         stack<int> s1, s2;
-        
+
         for(ListNode *temp = l1; temp != NULL; temp = temp->next)
             s1.push(temp->val);
         for(ListNode *temp = l2; temp != NULL; temp = temp->next)
             s2.push(temp->val);
-        
+
         int carry = 0;
         ListNode *next = NULL;
-        
+
         while(!s1.empty() || !s2.empty())
         {
             int temp = carry;
