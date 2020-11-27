@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<string> summaryRanges(vector<int>& nums)
+    vector<string> summaryRanges(vector<int>  &nums)
     {
         int n = nums.size();
 
