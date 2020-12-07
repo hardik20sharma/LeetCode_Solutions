@@ -1,4 +1,5 @@
-class NumArray {
+class NumArray
+{
 private:
     vector<int> sum;
 public:
@@ -11,7 +12,7 @@ public:
 
     int sumRange(int i, int j)
     {
-        return sum[j+1] - sum[i];
+        return (sum[j+1] - sum[i]);
     }
 };
 
