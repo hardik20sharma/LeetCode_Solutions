@@ -15,13 +15,13 @@ public:
         {
             while(res.length() > 0 && res.back() > str[i] && m[res.back()] > 0 && res.find(str[i]) == -1)
                 res.pop_back();
-         
+
             if(res.find(str[i]) == -1)
                 res.push_back(str[i]);
-     
+
             m[str[i]]--;
-        }    
-    
+        }
+
         return res;
     }
 };
