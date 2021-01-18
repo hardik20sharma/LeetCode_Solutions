@@ -1,0 +1,30 @@
+class Solution {
+public:
+    int maxOperations(vector<int>& nums, int k)
+    {
+        int res = 0;
+        map<int, int> mp;
+        
+        for(int n : nums)
+            mp[n]++;
+        
+        for(int n : nums)
+        {
+            if(k % 2 == 0 && n == k/2)
+            {
+                res += mp[n] / 2;
+                mp[n] = 0;
+            }
+
+            else if(mp[n] && mp[k - n])
+            {
+                int cnt = min(mp[n], mp[k-n]);
+                res += cnt;
+                mp[n] -= cnt;
+                mp[k-n] -= cnt;
+            }
+        }
+
+        return res;
+    }
+};
