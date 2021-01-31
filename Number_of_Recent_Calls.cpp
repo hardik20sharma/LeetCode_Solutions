@@ -1,13 +1,13 @@
-class RecentCounter {
-
+class RecentCounter
+{
 private:
     queue<int> calls;
 
 public:
-    RecentCounter() {
-    }
+    RecentCounter() {}
     
-    int ping(int t) {
+    int ping(int t)
+    {
         calls.push(t);
         while(calls.front() < t - 3000)
             calls.pop();
