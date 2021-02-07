@@ -6,7 +6,7 @@ private:
 public:
     RecentCounter() {}
     
-    int ping(int t)
+    int ping (int t)
     {
         calls.push(t);
         while(calls.front() < t - 3000)
