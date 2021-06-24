@@ -1,0 +1,22 @@
+class Solution {
+public:
+    vector<vector<int>> generate(int n)
+    {
+        vector<vector<int>> res(n, vector<int>(1, 1));
+
+        if(n == 1)
+            return res;
+
+        res[1].push_back(1);    // The second line in pascal triangle
+
+        for(int i=2; i<n; i++)  // We start computing from third line
+        {
+            for(int j = 0; j < res[i-1].size() - 1; j++)   // Iterating in previous row
+                res[i].push_back( res[i-1][j] + res[i-1][j+1] );  // Calculating the value
+            
+            res[i].push_back(1);  // Pushing the last 1 in number
+        }
+
+        return res;
+    }
+};
