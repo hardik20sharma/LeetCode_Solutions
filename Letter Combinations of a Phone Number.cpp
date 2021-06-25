@@ -1,6 +1,6 @@
 class Solution {
     vector<string> res;
-    vector<string> l {"", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+    vector<string> digits_to_letters {"", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 
 public:
     
@@ -12,10 +12,10 @@ public:
             return;
         }
         
-        for(char c : l[ digits[i] - '1' ])
+        for(char c : digits_to_letters[ digits[i] - '1' ])
             sol(digits, output + c, i + 1);
     }
-    
+
     vector<string> letterCombinations(string digits)
     {
         if(digits == "")
