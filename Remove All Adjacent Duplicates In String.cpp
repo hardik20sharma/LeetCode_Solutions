@@ -18,7 +18,7 @@ public:
 
         
         string res;
-        while(st.empty() == false)
+        while(!st.empty())
         {
             res += st.top();
             st.pop();
